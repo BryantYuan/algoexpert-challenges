@@ -1,0 +1,76 @@
+{
+    "input": [
+        {
+            "arguments": [
+                5
+            ],
+            "method": "insert"
+        },
+        {
+            "arguments": [
+                10
+            ],
+            "method": "insert"
+        },
+        {
+            "arguments": [
+                100
+            ],
+            "method": "insert"
+        },
+        {
+            "arguments": [],
+            "method": "getMedian"
+        },
+        {
+            "arguments": [
+                200
+            ],
+            "method": "insert"
+        },
+        {
+            "arguments": [],
+            "method": "getMedian"
+        }
+    ],
+    "expected": [
+        {
+            "arguments": [
+                5
+            ],
+            "method": "insert",
+            "output": null
+        },
+        {
+            "arguments": [
+                10
+            ],
+            "method": "insert",
+            "output": null
+        },
+        {
+            "arguments": [
+                100
+            ],
+            "method": "insert",
+            "output": null
+        },
+        {
+            "arguments": [],
+            "method": "getMedian",
+            "output": 10
+        },
+        {
+            "arguments": [
+                200
+            ],
+            "method": "insert",
+            "output": null
+        },
+        {
+            "arguments": [],
+            "method": "getMedian",
+            "output": 55
+        }
+    ]
+}

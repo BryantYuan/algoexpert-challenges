@@ -1,0 +1,7 @@
+{
+    "input": {
+        "string": "decadaafcdf",
+        "substring": "daf"
+    },
+    "expected": false
+}

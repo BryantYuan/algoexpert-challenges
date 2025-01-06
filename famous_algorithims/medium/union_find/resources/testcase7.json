@@ -1,0 +1,64 @@
+{
+    "input": {
+        "classMethodsToCall": [
+            {
+                "arguments": [
+                    0,
+                    1
+                ],
+                "method": "union"
+            },
+            {
+                "arguments": [
+                    1,
+                    2
+                ],
+                "method": "union"
+            },
+            {
+                "arguments": [
+                    0
+                ],
+                "method": "find"
+            },
+            {
+                "arguments": [
+                    2
+                ],
+                "method": "find"
+            }
+        ]
+    },
+    "expected": [
+        {
+            "arguments": [
+                0,
+                1
+            ],
+            "method": "union",
+            "output": null
+        },
+        {
+            "arguments": [
+                1,
+                2
+            ],
+            "method": "union",
+            "output": null
+        },
+        {
+            "arguments": [
+                0
+            ],
+            "method": "find",
+            "output": 0
+        },
+        {
+            "arguments": [
+                2
+            ],
+            "method": "find",
+            "output": 0
+        }
+    ]
+}

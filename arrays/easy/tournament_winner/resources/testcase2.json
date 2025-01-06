@@ -1,0 +1,22 @@
+{
+    "competitions": [
+        [
+            "HTML",
+            "Java"
+        ],
+        [
+            "Java",
+            "Python"
+        ],
+        [
+            "Python",
+            "HTML"
+        ]
+    ],
+    "results": [
+        0,
+        1,
+        1
+    ],
+    "expectedOutput": "Java"
+}

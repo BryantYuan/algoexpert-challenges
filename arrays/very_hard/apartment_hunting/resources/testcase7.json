@@ -1,0 +1,90 @@
+{
+    "input": {
+        "blocks": [
+            {
+                "gym": true,
+                "office": false,
+                "pool": false,
+                "school": true,
+                "store": false
+            },
+            {
+                "gym": false,
+                "office": false,
+                "pool": false,
+                "school": false,
+                "store": false
+            },
+            {
+                "gym": false,
+                "office": true,
+                "pool": false,
+                "school": true,
+                "store": false
+            },
+            {
+                "gym": false,
+                "office": true,
+                "pool": false,
+                "school": false,
+                "store": false
+            },
+            {
+                "gym": false,
+                "office": false,
+                "pool": false,
+                "school": false,
+                "store": true
+            },
+            {
+                "gym": true,
+                "office": true,
+                "pool": false,
+                "school": false,
+                "store": false
+            },
+            {
+                "gym": false,
+                "office": false,
+                "pool": true,
+                "school": false,
+                "store": false
+            },
+            {
+                "gym": false,
+                "office": false,
+                "pool": false,
+                "school": false,
+                "store": false
+            },
+            {
+                "gym": false,
+                "office": false,
+                "pool": false,
+                "school": false,
+                "store": false
+            },
+            {
+                "gym": false,
+                "office": false,
+                "pool": false,
+                "school": true,
+                "store": false
+            },
+            {
+                "gym": false,
+                "office": false,
+                "pool": true,
+                "school": false,
+                "store": false
+            }
+        ],
+        "reqs": [
+            "gym",
+            "pool",
+            "school",
+            "store"
+        ]
+    },
+    "expected_output": 4
+}

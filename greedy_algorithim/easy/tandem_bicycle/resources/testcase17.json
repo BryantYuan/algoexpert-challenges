@@ -1,0 +1,8 @@
+{
+    "input": {
+        "blueShirtSpeeds": [],
+        "fastest": true,
+        "redShirtSpeeds": []
+    },
+    "expected": 0
+}

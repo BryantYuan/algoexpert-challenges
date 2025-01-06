@@ -1,0 +1,13 @@
+{
+    "input": {
+        "dishes": [
+            10,
+            -5
+        ],
+        "target": 5
+    },
+    "expected_output": [
+        -5,
+        10
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "input": {
+        "array": [
+            48,
+            12,
+            24,
+            7,
+            8,
+            -5,
+            24,
+            391,
+            24,
+            56,
+            2,
+            6,
+            8,
+            41
+        ],
+        "classMethodsToCall": [
+            {
+                "arguments": [
+                    76
+                ],
+                "method": "insert"
+            },
+            {
+                "arguments": [],
+                "method": "peek"
+            },
+            {
+                "arguments": [],
+                "method": "remove"
+            },
+            {
+                "arguments": [],
+                "method": "peek"
+            },
+            {
+                "arguments": [],
+                "method": "remove"
+            },
+            {
+                "arguments": [],
+                "method": "peek"
+            },
+            {
+                "arguments": [
+                    87
+                ],
+                "method": "insert"
+            }
+        ]
+    },
+    "expected": "Runtime Error: TypeError: object of type 'NoneType' has no len()"
+}

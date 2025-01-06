@@ -1,0 +1,262 @@
+import json
+
+# List of dictionaries to split
+data = {
+  "Test Cases": [
+    {
+      "expectedOutput": {
+        "isValidTopologicalOrder": True,
+        "order": [4, 1, 3, 2]
+      },
+      "input": {
+        "deps": [
+          [1, 2],
+          [1, 3],
+          [3, 2],
+          [4, 2],
+          [4, 3]
+        ],
+        "jobs": [1, 2, 3, 4]
+      }
+    },
+    {
+      "expectedOutput": {
+        "isValidTopologicalOrder": True,
+        "order": [8, 5, 7, 3, 1, 4, 6, 2]
+      },
+      "input": {
+        "deps": [
+          [3, 1],
+          [8, 1],
+          [8, 7],
+          [5, 7],
+          [5, 2],
+          [1, 4],
+          [1, 6],
+          [1, 2],
+          [7, 6]
+        ],
+        "jobs": [1, 2, 3, 4, 5, 6, 7, 8]
+      }
+    },
+    {
+      "expectedOutput": {
+        "isValidTopologicalOrder": False,
+        "order": []
+      },
+      "input": {
+        "deps": [
+          [3, 1],
+          [8, 1],
+          [8, 7],
+          [5, 7],
+          [5, 2],
+          [1, 4],
+          [1, 6],
+          [1, 2],
+          [7, 6],
+          [4, 6],
+          [6, 2],
+          [2, 3]
+        ],
+        "jobs": [1, 2, 3, 4, 5, 6, 7, 8]
+      }
+    },
+    {
+      "expectedOutput": {
+        "isValidTopologicalOrder": False,
+        "order": []
+      },
+      "input": {
+        "deps": [
+          [1, 2],
+          [2, 3],
+          [3, 4],
+          [4, 5],
+          [5, 6],
+          [6, 7],
+          [7, 8],
+          [8, 1]
+        ],
+        "jobs": [1, 2, 3, 4, 5, 6, 7, 8]
+      }
+    },
+    {
+      "expectedOutput": {
+        "isValidTopologicalOrder": True,
+        "order": [9, 7, 8, 1, 2, 3, 4, 5, 6]
+      },
+      "input": {
+        "deps": [
+          [1, 2],
+          [2, 3],
+          [3, 4],
+          [4, 5],
+          [5, 6],
+          [7, 6],
+          [7, 8],
+          [8, 1]
+        ],
+        "jobs": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+      }
+    },
+    {
+      "expectedOutput": {
+        "isValidTopologicalOrder": True,
+        "order": [4, 3, 5, 6, 1, 2, 7, 8]
+      },
+      "input": {
+        "deps": [
+          [1, 2],
+          [3, 5],
+          [4, 6],
+          [3, 6],
+          [1, 7],
+          [7, 8],
+          [1, 8],
+          [2, 8]
+        ],
+        "jobs": [1, 2, 3, 4, 5, 6, 7, 8]
+      }
+    },
+    {
+      "expectedOutput": {
+        "isValidTopologicalOrder": True,
+        "order": [1, 2, 3, 4, 5, 6, 7, 8]
+      },
+      "input": {
+        "deps": [
+          [1, 2],
+          [1, 3],
+          [1, 4],
+          [1, 5],
+          [1, 6],
+          [1, 7],
+          [2, 8],
+          [3, 8],
+          [4, 8],
+          [5, 8],
+          [6, 8],
+          [7, 8]
+        ],
+        "jobs": [1, 2, 3, 4, 5, 6, 7, 8]
+      }
+    },
+    {
+      "expectedOutput": {
+        "isValidTopologicalOrder": True,
+        "order": [1, 7, 6, 2, 3, 10, 11, 12, 5, 4, 9, 8, 0]
+      },
+      "input": {
+        "deps": [
+          [1, 2],
+          [1, 3],
+          [1, 4],
+          [1, 5],
+          [1, 6],
+          [1, 7],
+          [2, 8],
+          [3, 8],
+          [4, 8],
+          [5, 8],
+          [6, 8],
+          [7, 8],
+          [2, 3],
+          [2, 4],
+          [5, 4],
+          [7, 6],
+          [6, 2],
+          [6, 3],
+          [6, 5],
+          [5, 9],
+          [9, 8],
+          [8, 0],
+          [4, 0],
+          [5, 0],
+          [9, 0],
+          [2, 0],
+          [3, 9],
+          [3, 10],
+          [10, 11],
+          [11, 12],
+          [2, 12]
+        ],
+        "jobs": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      }
+    },
+    {
+      "expectedOutput": {
+        "isValidTopologicalOrder": False,
+        "order": []
+      },
+      "input": {
+        "deps": [
+          [1, 2],
+          [1, 3],
+          [1, 4],
+          [1, 5],
+          [1, 6],
+          [1, 7],
+          [2, 8],
+          [3, 8],
+          [4, 8],
+          [5, 8],
+          [6, 8],
+          [7, 8],
+          [2, 3],
+          [2, 4],
+          [5, 4],
+          [7, 6],
+          [6, 2],
+          [6, 3],
+          [6, 5],
+          [5, 9],
+          [9, 8],
+          [8, 0],
+          [4, 0],
+          [5, 0],
+          [9, 0],
+          [2, 0],
+          [3, 9],
+          [3, 10],
+          [10, 11],
+          [11, 12],
+          [12, 2]
+        ],
+        "jobs": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      }
+    },
+    {
+      "expectedOutput": {
+        "isValidTopologicalOrder": True,
+        "order": [5, 4, 3, 2, 1]
+      },
+      "input": {
+        "deps": [],
+        "jobs": [1, 2, 3, 4, 5]
+      }
+    },
+    {
+      "expectedOutput": {
+        "isValidTopologicalOrder": True,
+        "order": [5, 2, 3, 1, 4]
+      },
+      "input": {
+        "deps": [
+          [1, 4],
+          [5, 2]
+        ],
+        "jobs": [1, 2, 3, 4, 5]
+      }
+    }
+  ]
+}
+
+
+# Split test_cases into separate files
+for i, testcase in enumerate(data["Test Cases"], start=1):
+    filename = f"testcase{i}.json"
+    with open(filename, 'w') as file:
+        json.dump(testcase, file, indent=4)
+
+print("Test cases have been saved as individual JSON files.")

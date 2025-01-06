@@ -1,0 +1,9 @@
+{
+    "input": {
+        "array": [
+            5
+        ],
+        "targetSum": 10
+    },
+    "expectedOutput": []
+}

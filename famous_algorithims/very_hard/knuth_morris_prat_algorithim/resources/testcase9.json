@@ -1,0 +1,7 @@
+{
+    "input": {
+        "string": "bccbefbcdabbbcabfdcfe",
+        "substring": "abc"
+    },
+    "expected": false
+}

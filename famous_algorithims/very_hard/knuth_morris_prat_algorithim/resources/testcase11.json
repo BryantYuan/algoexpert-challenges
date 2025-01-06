@@ -1,0 +1,7 @@
+{
+    "input": {
+        "string": "testwherethefullstringmatches",
+        "substring": "testwherethefullstringmatches"
+    },
+    "expected": true
+}

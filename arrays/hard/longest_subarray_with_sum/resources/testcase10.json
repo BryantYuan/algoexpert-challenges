@@ -1,0 +1,12 @@
+{
+    "input": {
+        "array": [
+            0
+        ],
+        "targetSum": 0
+    },
+    "expectedOutput": [
+        0,
+        0
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "input": {
+        "knightA": [
+            0,
+            0
+        ],
+        "knightB": [
+            1,
+            0
+        ]
+    },
+    "expectedOutput": 2
+}

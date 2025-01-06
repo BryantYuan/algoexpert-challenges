@@ -1,0 +1,11 @@
+{
+    "array": [
+        4,
+        6
+    ],
+    "targetSum": 10,
+    "expected": [
+        4,
+        6
+    ]
+}

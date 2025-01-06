@@ -1,0 +1,20 @@
+{
+    "input": {
+        "interns": [
+            [
+                0
+            ]
+        ],
+        "teams": [
+            [
+                0
+            ]
+        ]
+    },
+    "expected_output": [
+        [
+            0,
+            0
+        ]
+    ]
+}

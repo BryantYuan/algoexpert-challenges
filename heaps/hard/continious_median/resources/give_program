@@ -1,0 +1,100 @@
+import json
+
+# List of dictionaries to split
+test_cases = [
+    {
+        "input": [{"arguments": [5], "method": "insert"},
+                  {"arguments": [10], "method": "insert"},
+                  {"arguments": [], "method": "getMedian"},
+                  {"arguments": [100], "method": "insert"},
+                  {"arguments": [], "method": "getMedian"}],
+        "expected": [
+            {"arguments": [5], "method": "insert", "output": None},
+            {"arguments": [10], "method": "insert", "output": None},
+            {"arguments": [], "method": "getMedian", "output": 7.5},
+            {"arguments": [100], "method": "insert", "output": None},
+            {"arguments": [], "method": "getMedian", "output": 10}
+        ]
+    },
+    {
+        "input": [{"arguments": [5], "method": "insert"},
+                  {"arguments": [], "method": "getMedian"},
+                  {"arguments": [10], "method": "insert"},
+                  {"arguments": [], "method": "getMedian"}],
+        "expected": [
+            {"arguments": [5], "method": "insert", "output": None},
+            {"arguments": [], "method": "getMedian", "output": 5},
+            {"arguments": [10], "method": "insert", "output": None},
+            {"arguments": [], "method": "getMedian", "output": 7.5}
+        ]
+    },
+    {
+        "input": [{"arguments": [5], "method": "insert"},
+                  {"arguments": [10], "method": "insert"},
+                  {"arguments": [100], "method": "insert"},
+                  {"arguments": [], "method": "getMedian"},
+                  {"arguments": [200], "method": "insert"},
+                  {"arguments": [], "method": "getMedian"}],
+        "expected": [
+            {"arguments": [5], "method": "insert", "output": None},
+            {"arguments": [10], "method": "insert", "output": None},
+            {"arguments": [100], "method": "insert", "output": None},
+            {"arguments": [], "method": "getMedian", "output": 10},
+            {"arguments": [200], "method": "insert", "output": None},
+            {"arguments": [], "method": "getMedian", "output": 55}
+        ]
+    },
+    {
+        "input": [{"arguments": [5], "method": "insert"},
+                  {"arguments": [10], "method": "insert"},
+                  {"arguments": [100], "method": "insert"},
+                  {"arguments": [200], "method": "insert"},
+                  {"arguments": [6], "method": "insert"},
+                  {"arguments": [], "method": "getMedian"},
+                  {"arguments": [13], "method": "insert"},
+                  {"arguments": [], "method": "getMedian"}],
+        "expected": [
+            {"arguments": [5], "method": "insert", "output": None},
+            {"arguments": [10], "method": "insert", "output": None},
+            {"arguments": [100], "method": "insert", "output": None},
+            {"arguments": [200], "method": "insert", "output": None},
+            {"arguments": [6], "method": "insert", "output": None},
+            {"arguments": [], "method": "getMedian", "output": 10},
+            {"arguments": [13], "method": "insert", "output": None},
+            {"arguments": [], "method": "getMedian", "output": 11.5}
+        ]
+    },
+    {
+        "input": [{"arguments": [5], "method": "insert"},
+                  {"arguments": [10], "method": "insert"},
+                  {"arguments": [100], "method": "insert"},
+                  {"arguments": [200], "method": "insert"},
+                  {"arguments": [6], "method": "insert"},
+                  {"arguments": [13], "method": "insert"},
+                  {"arguments": [14], "method": "insert"},
+                  {"arguments": [], "method": "getMedian"},
+                  {"arguments": [50], "method": "insert"},
+                  {"arguments": [], "method": "getMedian"}],
+        "expected": [
+            {"arguments": [5], "method": "insert", "output": None},
+            {"arguments": [10], "method": "insert", "output": None},
+            {"arguments": [100], "method": "insert", "output": None},
+            {"arguments": [200], "method": "insert", "output": None},
+            {"arguments": [6], "method": "insert", "output": None},
+            {"arguments": [13], "method": "insert", "output": None},
+            {"arguments": [14], "method": "insert", "output": None},
+            {"arguments": [], "method": "getMedian", "output": 13},
+            {"arguments": [50], "method": "insert", "output": None},
+            {"arguments": [], "method": "getMedian", "output": 13.5}
+        ]
+    }
+]
+
+
+# Split test_cases into separate files
+for i, testcase in enumerate(test_cases, start=1):
+    filename = f"testcase{i}.json"
+    with open(filename, 'w') as file:
+        json.dump(testcase, file, indent=4)
+
+print("Test cases have been saved as individual JSON files.")

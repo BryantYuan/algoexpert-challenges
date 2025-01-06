@@ -1,0 +1,12 @@
+{
+    "competitions": [
+        [
+            "Bulls",
+            "Eagles"
+        ]
+    ],
+    "results": [
+        1
+    ],
+    "expectedOutput": "Bulls"
+}

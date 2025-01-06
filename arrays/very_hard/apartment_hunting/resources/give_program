@@ -1,0 +1,124 @@
+import json
+
+# List of dictionaries to split
+data = [
+  {
+    "input": {
+      "blocks": [
+        {"gym": False, "school": True, "store": False},
+        {"gym": True, "school": False, "store": False},
+        {"gym": True, "school": True, "store": False},
+        {"gym": False, "school": True, "store": False},
+        {"gym": False, "school": True, "store": True}
+      ],
+      "reqs": ["gym", "school", "store"]
+    },
+    "expected_output": 3
+  },
+  {
+    "input": {
+      "blocks": [
+        {"gym": False, "office": True, "school": True, "store": False},
+        {"gym": True, "office": False, "school": False, "store": False},
+        {"gym": True, "office": False, "school": True, "store": False},
+        {"gym": False, "office": False, "school": True, "store": False},
+        {"gym": False, "office": False, "school": True, "store": True}
+      ],
+      "reqs": ["gym", "office", "school", "store"]
+    },
+    "expected_output": 2
+  },
+  {
+    "input": {
+      "blocks": [
+        {"gym": False, "office": True, "school": True, "store": False},
+        {"gym": True, "office": False, "school": False, "store": False},
+        {"gym": True, "office": False, "school": True, "store": False},
+        {"gym": False, "office": False, "school": True, "store": False},
+        {"gym": False, "office": False, "school": True, "store": False},
+        {"gym": False, "office": False, "school": True, "store": True}
+      ],
+      "reqs": ["gym", "office", "school", "store"]
+    },
+    "expected_output": 2
+  },
+  {
+    "input": {
+      "blocks": [
+        {"foo": True, "gym": False, "kappa": False, "office": True, "school": True, "store": False},
+        {"foo": True, "gym": True, "kappa": False, "office": False, "school": False, "store": False},
+        {"foo": True, "gym": True, "kappa": False, "office": False, "school": True, "store": False},
+        {"foo": True, "gym": False, "kappa": False, "office": False, "school": True, "store": False},
+        {"foo": True, "gym": True, "kappa": False, "office": False, "school": True, "store": False},
+        {"foo": True, "gym": False, "kappa": False, "office": False, "school": True, "store": True}
+      ],
+      "reqs": ["gym", "school", "store"]
+    },
+    "expected_output": 4
+  },
+  {
+    "input": {
+      "blocks": [
+        {"gym": True, "school": True, "store": False},
+        {"gym": False, "school": False, "store": False},
+        {"gym": False, "school": True, "store": False},
+        {"gym": False, "school": False, "store": False},
+        {"gym": False, "school": False, "store": True},
+        {"gym": True, "school": False, "store": False},
+        {"gym": False, "school": False, "store": False},
+        {"gym": False, "school": False, "store": False},
+        {"gym": False, "school": False, "store": False},
+        {"gym": False, "school": True, "store": False}
+      ],
+      "reqs": ["gym", "school", "store"]
+    },
+    "expected_output": 2
+  },
+  {
+    "input": {
+      "blocks": [
+        {"gym": True, "pool": False, "school": True, "store": False},
+        {"gym": False, "pool": False, "school": False, "store": False},
+        {"gym": False, "pool": False, "school": True, "store": False},
+        {"gym": False, "pool": False, "school": False, "store": False},
+        {"gym": False, "pool": False, "school": False, "store": True},
+        {"gym": True, "pool": False, "school": False, "store": False},
+        {"gym": False, "pool": False, "school": False, "store": False},
+        {"gym": False, "pool": False, "school": False, "store": False},
+        {"gym": False, "pool": False, "school": False, "store": False},
+        {"gym": False, "pool": False, "school": True, "store": False},
+        {"gym": False, "pool": True, "school": False, "store": False}
+      ],
+      "reqs": ["gym", "pool", "school", "store"]
+    },
+    "expected_output": 7
+  },
+  {
+    "input": {
+      "blocks": [
+        {"gym": True, "office": False, "pool": False, "school": True, "store": False},
+        {"gym": False, "office": False, "pool": False, "school": False, "store": False},
+        {"gym": False, "office": True, "pool": False, "school": True, "store": False},
+        {"gym": False, "office": True, "pool": False, "school": False, "store": False},
+        {"gym": False, "office": False, "pool": False, "school": False, "store": True},
+        {"gym": True, "office": True, "pool": False, "school": False, "store": False},
+        {"gym": False, "office": False, "pool": True, "school": False, "store": False},
+        {"gym": False, "office": False, "pool": False, "school": False, "store": False},
+        {"gym": False, "office": False, "pool": False, "school": False, "store": False},
+        {"gym": False, "office": False, "pool": False, "school": True, "store": False},
+        {"gym": False, "office": False, "pool": True, "school": False, "store": False}
+      ],
+      "reqs": ["gym", "pool", "school", "store"]
+    },
+    "expected_output": 4
+  }
+]
+
+
+# Split test_cases into separate files
+for i, testcase in enumerate(data, start=1):
+    filename = f"testcase{i}.json"
+    with open(filename, 'w') as file:
+        json.dump(testcase, file, indent=4)
+
+print("Test cases have been saved as individual JSON files.")

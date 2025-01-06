@@ -1,0 +1,12 @@
+{
+    "input": {
+        "jobs": [
+            {
+                "deadline": 1,
+                "payment": 1
+            }
+        ]
+    },
+    "expected": 1,
+    "output": -1
+}

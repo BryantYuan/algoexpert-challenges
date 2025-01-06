@@ -1,0 +1,9 @@
+{
+    "input": {
+        "scores": [
+            5,
+            10
+        ]
+    },
+    "expected": 3
+}

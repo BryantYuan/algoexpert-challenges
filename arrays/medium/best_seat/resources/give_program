@@ -1,0 +1,70 @@
+import json
+
+# List of dictionaries to split
+data = [
+  {
+    "input": [1],
+    "expected": -1
+  },
+  {
+    "input": [1, 0, 1, 0, 0, 0, 1],
+    "expected": 4
+  },
+  {
+    "input": [1, 0, 1],
+    "expected": 1
+  },
+  {
+    "input": [1, 0, 0, 1],
+    "expected": 1
+  },
+  {
+    "input": [1, 1, 1],
+    "expected": -1
+  },
+  {
+    "input": [1, 0, 0, 1, 0, 0, 1],
+    "expected": 1
+  },
+  {
+    "input": [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1],
+    "expected": 3
+  },
+  {
+    "input": [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1],
+    "expected": 4
+  },
+  {
+    "input": [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1],
+    "expected": 4
+  },
+  {
+    "input": [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    "expected": 13
+  },
+  {
+    "input": [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1],
+    "expected": 13
+  },
+  {
+    "input": [1, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+    "expected": 6
+  },
+  {
+    "input": [1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1],
+    "expected": 3
+  },
+  {
+    "input": [1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1],
+    "expected": 5
+  }
+]
+
+
+# Split test_cases into separate files
+for i, testcase in enumerate(data, start=1):
+    filename = f"testcase{i}.json"
+    with open(filename, 'w') as file:
+        json.dump(testcase, file, indent=4)
+
+print("Test cases have been saved as individual JSON files.")

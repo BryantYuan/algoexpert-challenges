@@ -1,0 +1,22 @@
+{
+    "competitions": [
+        [
+            "Bulls",
+            "Eagles"
+        ],
+        [
+            "Bulls",
+            "Bears"
+        ],
+        [
+            "Bears",
+            "Eagles"
+        ]
+    ],
+    "results": [
+        0,
+        0,
+        0
+    ],
+    "expectedOutput": "Eagles"
+}

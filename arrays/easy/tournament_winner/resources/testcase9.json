@@ -1,0 +1,57 @@
+{
+    "competitions": [
+        [
+            "HTML",
+            "Java"
+        ],
+        [
+            "Java",
+            "Python"
+        ],
+        [
+            "Python",
+            "HTML"
+        ],
+        [
+            "C#",
+            "Python"
+        ],
+        [
+            "Java",
+            "C#"
+        ],
+        [
+            "C#",
+            "HTML"
+        ],
+        [
+            "SQL",
+            "C#"
+        ],
+        [
+            "HTML",
+            "SQL"
+        ],
+        [
+            "SQL",
+            "Python"
+        ],
+        [
+            "SQL",
+            "Java"
+        ]
+    ],
+    "results": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+    ],
+    "expectedOutput": "SQL"
+}

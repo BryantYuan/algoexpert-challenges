@@ -1,0 +1,128 @@
+import json
+
+# List of dictionaries to split
+data = [
+  {
+    "input": {
+      "array": [-1, -5, -10, -1100, -1100, -1101, -1102, -9001]
+    },
+    "expectedOutput": True
+  },
+  {
+    "input": {
+      "array": []
+    },
+    "expectedOutput": True
+  },
+  {
+    "input": {
+      "array": [1]
+    },
+    "expectedOutput": True
+  },
+  {
+    "input": {
+      "array": [1, 2]
+    },
+    "expectedOutput": True
+  },
+  {
+    "input": {
+      "array": [2, 1]
+    },
+    "expectedOutput": True
+  },
+  {
+    "input": {
+      "array": [1, 5, 10, 1100, 1101, 1102, 9001]
+    },
+    "expectedOutput": True
+  },
+  {
+    "input": {
+      "array": [-1, -5, -10, -1100, -1101, -1102, -9001]
+    },
+    "expectedOutput": True
+  },
+  {
+    "input": {
+      "array": [-1, -5, -10, -1100, -900, -1101, -1102, -9001]
+    },
+    "expectedOutput": False
+  },
+  {
+    "input": {
+      "array": [1, 2, 0]
+    },
+    "expectedOutput": False
+  },
+  {
+    "input": {
+      "array": [1, 1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 7, 9, 10, 11]
+    },
+    "expectedOutput": False
+  },
+  {
+    "input": {
+      "array": [1, 1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 8, 9, 10, 11]
+    },
+    "expectedOutput": True
+  },
+  {
+    "input": {
+      "array": [-1, -1, -2, -3, -4, -5, -5, -5, -6, -7, -8, -7, -9, -10, -11]
+    },
+    "expectedOutput": False
+  },
+  {
+    "input": {
+      "array": [-1, -1, -2, -3, -4, -5, -5, -5, -6, -7, -8, -8, -9, -10, -11]
+    },
+    "expectedOutput": True
+  },
+  {
+    "input": {
+      "array": [-1, -1, -1, -1, -1, -1, -1, -1]
+    },
+    "expectedOutput": True
+  },
+  {
+    "input": {
+      "array": [1, 2, -1, -2, -5]
+    },
+    "expectedOutput": False
+  },
+  {
+    "input": {
+      "array": [-1, -5, 10]
+    },
+    "expectedOutput": False
+  },
+  {
+    "input": {
+      "array": [2, 2, 2, 1, 4, 5]
+    },
+    "expectedOutput": False
+  },
+  {
+    "input": {
+      "array": [1, 1, 1, 2, 3, 4, 1]
+    },
+    "expectedOutput": False
+  },
+  {
+    "input": {
+      "array": [1, 2, 3, 3, 2, 1]
+    },
+    "expectedOutput": False
+  }
+]
+
+
+# Split test_cases into separate files
+for i, testcase in enumerate(data, start=1):
+    filename = f"testcase{i}.json"
+    with open(filename, 'w') as file:
+        json.dump(testcase, file, indent=4)
+
+print("Test cases have been saved as individual JSON files.")

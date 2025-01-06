@@ -1,0 +1,14 @@
+{
+    "input": {
+        "distances": [
+            4,
+            6
+        ],
+        "fuel": [
+            1,
+            9
+        ],
+        "mpg": 1
+    },
+    "expected": 1
+}

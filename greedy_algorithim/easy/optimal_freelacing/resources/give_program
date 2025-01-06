@@ -1,0 +1,168 @@
+import json
+
+# List of dictionaries to split
+test_cases = [
+    {
+        "input": {"jobs": []},
+        "expected": 0,
+        "output": -1
+    },
+    {
+        "input": {
+            "jobs": [
+                {"deadline": 1, "payment": 1}
+            ]
+        },
+        "expected": 1,
+        "output": -1
+    },
+    {
+        "input": {
+            "jobs": [
+                {"deadline": 1, "payment": 2},
+                {"deadline": 1, "payment": 1}
+            ]
+        },
+        "expected": 2,
+        "output": -1
+    },
+    {
+        "input": {
+            "jobs": [
+                {"deadline": 1, "payment": 1},
+                {"deadline": 1, "payment": 2}
+            ]
+        },
+        "expected": 2,
+        "output": -1
+    },
+    {
+        "input": {
+            "jobs": [
+                {"deadline": 1, "payment": 1},
+                {"deadline": 2, "payment": 1}
+            ]
+        },
+        "expected": 2,
+        "output": -1
+    },
+    {
+        "input": {
+            "jobs": [
+                {"deadline": 1, "payment": 1},
+                {"deadline": 2, "payment": 2},
+                {"deadline": 2, "payment": 1}
+            ]
+        },
+        "expected": 3,
+        "output": -1
+    },
+    {
+        "input": {
+            "jobs": [
+                {"deadline": 8, "payment": 3},
+                {"deadline": 1, "payment": 1},
+                {"deadline": 1, "payment": 2}
+            ]
+        },
+        "expected": 5,
+        "output": -1
+    },
+    {
+        "input": {
+            "jobs": [
+                {"deadline": 2, "payment": 2},
+                {"deadline": 4, "payment": 3},
+                {"deadline": 5, "payment": 1},
+                {"deadline": 7, "payment": 2},
+                {"deadline": 3, "payment": 1},
+                {"deadline": 3, "payment": 2},
+                {"deadline": 1, "payment": 3}
+            ]
+        },
+        "expected": 13,
+        "output": -1
+    },
+    {
+        "input": {
+            "jobs": [
+                {"deadline": 2, "payment": 1},
+                {"deadline": 2, "payment": 2},
+                {"deadline": 2, "payment": 3},
+                {"deadline": 2, "payment": 4},
+                {"deadline": 2, "payment": 5},
+                {"deadline": 2, "payment": 6},
+                {"deadline": 2, "payment": 7}
+            ]
+        },
+        "expected": 13,
+        "output": -1
+    },
+    {
+        "input": {
+            "jobs": [
+                {"deadline": 8, "payment": 1},
+                {"deadline": 6, "payment": 4},
+                {"deadline": 1, "payment": 2},
+                {"deadline": 1, "payment": 3},
+                {"deadline": 2, "payment": 3},
+                {"deadline": 5, "payment": 2}
+            ]
+        },
+        "expected": 13,
+        "output": -1
+    },
+    {
+        "input": {
+            "jobs": [
+                {"deadline": 2, "payment": 1},
+                {"deadline": 1, "payment": 4},
+                {"deadline": 3, "payment": 2},
+                {"deadline": 1, "payment": 3},
+                {"deadline": 4, "payment": 3},
+                {"deadline": 4, "payment": 2},
+                {"deadline": 4, "payment": 1},
+                {"deadline": 5, "payment": 4},
+                {"deadline": 8, "payment": 1}
+            ]
+        },
+        "expected": 16,
+        "output": -1
+    },
+    {
+        "input": {
+            "jobs": [
+                {"deadline": 10, "payment": 1}
+            ]
+        },
+        "expected": 1,
+        "output": -1
+    },
+    {
+        "input": {
+            "jobs": [
+                {"deadline": 1, "payment": 1},
+                {"deadline": 2, "payment": 1},
+                {"deadline": 3, "payment": 1},
+                {"deadline": 4, "payment": 1},
+                {"deadline": 5, "payment": 1},
+                {"deadline": 6, "payment": 1},
+                {"deadline": 7, "payment": 1},
+                {"deadline": 8, "payment": 1},
+                {"deadline": 9, "payment": 1},
+                {"deadline": 10, "payment": 1}
+            ]
+        },
+        "expected": 7,
+        "output": -1
+    }
+]
+
+
+# Split test_cases into separate files
+for i, testcase in enumerate(test_cases, start=1):
+    filename = f"testcase{i}.json"
+    with open(filename, 'w') as file:
+        json.dump(testcase, file, indent=4)
+
+print("Test cases have been saved as individual JSON files.")

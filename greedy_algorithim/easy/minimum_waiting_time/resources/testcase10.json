@@ -1,0 +1,9 @@
+{
+    "input": {
+        "queries": [
+            8,
+            9
+        ]
+    },
+    "expected": 8
+}

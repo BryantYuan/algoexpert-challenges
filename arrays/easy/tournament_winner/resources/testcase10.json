@@ -1,0 +1,12 @@
+{
+    "competitions": [
+        [
+            "A",
+            "B"
+        ]
+    ],
+    "results": [
+        0
+    ],
+    "expectedOutput": "B"
+}

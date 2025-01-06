@@ -1,0 +1,147 @@
+import json
+
+# List of dictionaries to split
+data = [
+  {
+    "input": {
+      "array": [1, 2, 3, 4, 3, 3, 1, 2, 1],
+      "targetSum": 10
+    },
+    "expectedOutput": [4, 8]
+  },
+  {
+    "input": {
+      "array": [1, 2, 3, 4, 0, 0, 0, 0, 0, 3, 3, 1, 2, 1],
+      "targetSum": 10
+    },
+    "expectedOutput": [4, 13]
+  },
+  {
+    "input": {
+      "array": [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      "targetSum": 1
+    },
+    "expectedOutput": [0, 9]
+  },
+  {
+    "input": {
+      "array": [0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+      "targetSum": 1
+    },
+    "expectedOutput": [0, 9]
+  },
+  {
+    "input": {
+      "array": [25, 25, 25, 25, 100, 0, 0, 0, 0, 0, 0, 0],
+      "targetSum": 100
+    },
+    "expectedOutput": [4, 11]
+  },
+  {
+    "input": {
+      "array": [1, 2, 3, 4, 5, 5, 5, 5],
+      "targetSum": 15
+    },
+    "expectedOutput": [0, 4]
+  },
+  {
+    "input": {
+      "array": [0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 5, 5, 5, 5, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1],
+      "targetSum": 20
+    },
+    "expectedOutput": [11, 23]
+  },
+  {
+    "input": {
+      "array": [1, 2, 3, 4, 5, 0, 0, 0, 6, 7, 8, 9, 10],
+      "targetSum": 15
+    },
+    "expectedOutput": [0, 7]
+  },
+  {
+    "input": {
+      "array": [61, 54, 1, 499, 2212, 4059, 1, 2, 3, 1, 3],
+      "targetSum": 19
+    },
+    "expectedOutput": []
+  },
+  {
+    "input": {
+      "array": [0],
+      "targetSum": 0
+    },
+    "expectedOutput": [0, 0]
+  },
+  {
+    "input": {
+      "array": [10],
+      "targetSum": 10
+    },
+    "expectedOutput": [0, 0]
+  },
+  {
+    "input": {
+      "array": [5],
+      "targetSum": 0
+    },
+    "expectedOutput": []
+  },
+  {
+    "input": {
+      "array": [5],
+      "targetSum": 10
+    },
+    "expectedOutput": []
+  },
+  {
+    "input": {
+      "array": [0, 1, 0, 1],
+      "targetSum": 3
+    },
+    "expectedOutput": []
+  },
+  {
+    "input": {
+      "array": [0, 0, 0, 0, 39, 0, 0, 0, 0, 0, 28, 10],
+      "targetSum": 39
+    },
+    "expectedOutput": [0, 9]
+  },
+  {
+    "input": {
+      "array": [1, 4, 10, 15, 31, 7, 1, 40, 0, 20, 1, 1, 1, 1, 2, 1],
+      "targetSum": 68
+    },
+    "expectedOutput": [6, 15]
+  },
+  {
+    "input": {
+      "array": [1, 4, 10, 15, 31, 7, 1, 40, 0, 20, 1, 1, 1, 1, 2, 1],
+      "targetSum": 0
+    },
+    "expectedOutput": [8, 8]
+  },
+  {
+    "input": {
+      "array": [1, 4, 10, 15, 31, 7, 1, 40, 5, 20, 1, 1, 1, 1, 2, 1],
+      "targetSum": 0
+    },
+    "expectedOutput": []
+  },
+  {
+    "input": {
+      "array": [1, 2, 3, 4, 5],
+      "targetSum": 0
+    },
+    "expectedOutput": []
+  }
+]
+
+
+# Split test_cases into separate files
+for i, testcase in enumerate(data, start=1):
+    filename = f"testcase{i}.json"
+    with open(filename, 'w') as file:
+        json.dump(testcase, file, indent=4)
+
+print("Test cases have been saved as individual JSON files.")

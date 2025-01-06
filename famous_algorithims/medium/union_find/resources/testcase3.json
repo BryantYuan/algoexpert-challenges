@@ -1,0 +1,34 @@
+{
+    "input": {
+        "classMethodsToCall": [
+            {
+                "arguments": [
+                    0
+                ],
+                "method": "createSet"
+            },
+            {
+                "arguments": [
+                    0
+                ],
+                "method": "find"
+            }
+        ]
+    },
+    "expected": [
+        {
+            "arguments": [
+                0
+            ],
+            "method": "createSet",
+            "output": null
+        },
+        {
+            "arguments": [
+                0
+            ],
+            "method": "find",
+            "output": 0
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "input": {
+        "blueShirtHeights": [
+            125
+        ],
+        "redShirtHeights": [
+            126
+        ]
+    },
+    "expected": true,
+    "output": false
+}

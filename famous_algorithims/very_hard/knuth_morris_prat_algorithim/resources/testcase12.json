@@ -1,0 +1,7 @@
+{
+    "input": {
+        "string": "aabc",
+        "substring": "abc"
+    },
+    "expected": true
+}

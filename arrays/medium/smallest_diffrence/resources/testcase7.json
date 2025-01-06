@@ -1,0 +1,16 @@
+{
+    "input": {
+        "arrayOne": [
+            0,
+            20
+        ],
+        "arrayTwo": [
+            21,
+            -2
+        ]
+    },
+    "expectedOutput": [
+        20,
+        21
+    ]
+}

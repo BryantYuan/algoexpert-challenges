@@ -1,0 +1,103 @@
+{
+    "input": {
+        "classMethodsToCall": [
+            {
+                "arguments": [
+                    0
+                ],
+                "method": "createSet"
+            },
+            {
+                "arguments": [
+                    2
+                ],
+                "method": "createSet"
+            },
+            {
+                "arguments": [
+                    2,
+                    0
+                ],
+                "method": "union"
+            },
+            {
+                "arguments": [
+                    3
+                ],
+                "method": "createSet"
+            },
+            {
+                "arguments": [
+                    3,
+                    0
+                ],
+                "method": "union"
+            },
+            {
+                "arguments": [
+                    0
+                ],
+                "method": "find"
+            },
+            {
+                "arguments": [
+                    2
+                ],
+                "method": "find"
+            }
+        ]
+    },
+    "expected": [
+        {
+            "arguments": [
+                0
+            ],
+            "method": "createSet",
+            "output": null
+        },
+        {
+            "arguments": [
+                2
+            ],
+            "method": "createSet",
+            "output": null
+        },
+        {
+            "arguments": [
+                2,
+                0
+            ],
+            "method": "union",
+            "output": null
+        },
+        {
+            "arguments": [
+                3
+            ],
+            "method": "createSet",
+            "output": null
+        },
+        {
+            "arguments": [
+                3,
+                0
+            ],
+            "method": "union",
+            "output": null
+        },
+        {
+            "arguments": [
+                0
+            ],
+            "method": "find",
+            "output": 2
+        },
+        {
+            "arguments": [
+                2
+            ],
+            "method": "find",
+            "output": 2
+        }
+    ]
+}

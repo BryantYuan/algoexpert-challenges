@@ -1,0 +1,280 @@
+{
+    "input": {
+        "classMethodsToCall": [
+            {
+                "arguments": [
+                    3
+                ],
+                "method": "createSet"
+            },
+            {
+                "arguments": [
+                    12
+                ],
+                "method": "createSet"
+            },
+            {
+                "arguments": [
+                    5
+                ],
+                "method": "find"
+            },
+            {
+                "arguments": [
+                    2
+                ],
+                "method": "createSet"
+            },
+            {
+                "arguments": [
+                    1000
+                ],
+                "method": "createSet"
+            },
+            {
+                "arguments": [
+                    1000,
+                    2
+                ],
+                "method": "union"
+            },
+            {
+                "arguments": [
+                    1000,
+                    5
+                ],
+                "method": "union"
+            },
+            {
+                "arguments": [
+                    1,
+                    12
+                ],
+                "method": "union"
+            },
+            {
+                "arguments": [
+                    7
+                ],
+                "method": "createSet"
+            },
+            {
+                "arguments": [
+                    3,
+                    5
+                ],
+                "method": "union"
+            },
+            {
+                "arguments": [
+                    7,
+                    3
+                ],
+                "method": "union"
+            },
+            {
+                "arguments": [
+                    1
+                ],
+                "method": "find"
+            },
+            {
+                "arguments": [
+                    3
+                ],
+                "method": "find"
+            },
+            {
+                "arguments": [
+                    12
+                ],
+                "method": "find"
+            },
+            {
+                "arguments": [
+                    5
+                ],
+                "method": "find"
+            },
+            {
+                "arguments": [
+                    2
+                ],
+                "method": "find"
+            },
+            {
+                "arguments": [
+                    1000
+                ],
+                "method": "find"
+            },
+            {
+                "arguments": [
+                    7
+                ],
+                "method": "find"
+            },
+            {
+                "arguments": [
+                    3,
+                    12
+                ],
+                "method": "union"
+            },
+            {
+                "arguments": [
+                    12
+                ],
+                "method": "find"
+            }
+        ]
+    },
+    "expected": [
+        {
+            "arguments": [
+                3
+            ],
+            "method": "createSet",
+            "output": null
+        },
+        {
+            "arguments": [
+                12
+            ],
+            "method": "createSet",
+            "output": null
+        },
+        {
+            "arguments": [
+                5
+            ],
+            "method": "find",
+            "output": null
+        },
+        {
+            "arguments": [
+                2
+            ],
+            "method": "createSet",
+            "output": null
+        },
+        {
+            "arguments": [
+                1000
+            ],
+            "method": "createSet",
+            "output": null
+        },
+        {
+            "arguments": [
+                1000,
+                2
+            ],
+            "method": "union",
+            "output": null
+        },
+        {
+            "arguments": [
+                1000,
+                5
+            ],
+            "method": "union",
+            "output": null
+        },
+        {
+            "arguments": [
+                1,
+                12
+            ],
+            "method": "union",
+            "output": null
+        },
+        {
+            "arguments": [
+                7
+            ],
+            "method": "createSet",
+            "output": null
+        },
+        {
+            "arguments": [
+                3,
+                5
+            ],
+            "method": "union",
+            "output": null
+        },
+        {
+            "arguments": [
+                7,
+                3
+            ],
+            "method": "union",
+            "output": null
+        },
+        {
+            "arguments": [
+                1
+            ],
+            "method": "find",
+            "output": null
+        },
+        {
+            "arguments": [
+                3
+            ],
+            "method": "find",
+            "output": 7
+        },
+        {
+            "arguments": [
+                12
+            ],
+            "method": "find",
+            "output": 7
+        },
+        {
+            "arguments": [
+                5
+            ],
+            "method": "find",
+            "output": 7
+        },
+        {
+            "arguments": [
+                2
+            ],
+            "method": "find",
+            "output": 7
+        },
+        {
+            "arguments": [
+                1000
+            ],
+            "method": "find",
+            "output": 7
+        },
+        {
+            "arguments": [
+                7
+            ],
+            "method": "find",
+            "output": 7
+        },
+        {
+            "arguments": [
+                3,
+                12
+            ],
+            "method": "union",
+            "output": null
+        },
+        {
+            "arguments": [
+                12
+            ],
+            "method": "find",
+            "output": 7
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "input": {
+        "coins": [
+            1,
+            1
+        ]
+    },
+    "expectedOutput": 3
+}

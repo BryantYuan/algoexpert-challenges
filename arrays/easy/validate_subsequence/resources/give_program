@@ -1,0 +1,181 @@
+import json
+
+# List of dictionaries to split
+data = [
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [1, 6, -1, 10]
+        },
+        "expected_output": True
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [5, 1, 22, 25, 6, -1, 8, 10]
+        },
+        "expected_output": True
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [5, 1, 22, 6, -1, 8, 10]
+        },
+        "expected_output": True
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [22, 25, 6]
+        },
+        "expected_output": True
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [1, 6, 10]
+        },
+        "expected_output": True
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [5, 1, 22, 10]
+        },
+        "expected_output": True
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [5, -1, 8, 10]
+        },
+        "expected_output": True
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [25]
+        },
+        "expected_output": True
+    },
+    {
+        "input": {
+            "array": [1, 1, 1, 1, 1],
+            "sequence": [1, 1, 1]
+        },
+        "expected_output": True
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [5, 1, 22, 25, 6, -1, 8, 10, 12]
+        },
+        "expected_output": False
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [4, 5, 1, 22, 25, 6, -1, 8, 10]
+        },
+        "expected_output": False
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [5, 1, 22, 23, 6, -1, 8, 10]
+        },
+        "expected_output": False
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [5, 1, 22, 22, 25, 6, -1, 8, 10]
+        },
+        "expected_output": False
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [5, 1, 22, 22, 6, -1, 8, 10]
+        },
+        "expected_output": False
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [1, 6, -1, -1]
+        },
+        "expected_output": False
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [1, 6, -1, -1, 10]
+        },
+        "expected_output": False
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [1, 6, -1, -2]
+        },
+        "expected_output": False
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [26]
+        },
+        "expected_output": False
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [5, 1, 25, 22, 6, -1, 8, 10]
+        },
+        "expected_output": False
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [5, 26, 22, 8]
+        },
+        "expected_output": False
+    },
+    {
+        "input": {
+            "array": [1, 1, 6, 1],
+            "sequence": [1, 1, 1, 6]
+        },
+        "expected_output": False
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [1, 6, -1, 10, 11, 11, 11, 11]
+        },
+        "expected_output": False
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [5, 1, 22, 25, 6, -1, 8, 10, 10]
+        },
+        "expected_output": False
+    },
+    {
+        "input": {
+            "array": [5, 1, 22, 25, 6, -1, 8, 10],
+            "sequence": [1, 6, -1, 5]
+        },
+        "expected_output": False
+    }
+]
+
+# Split test_cases into separate files
+for i, testcase in enumerate(data, start=1):
+    filename = f"testcase{i}.json"
+    with open(filename, 'w') as file:
+        json.dump(testcase, file, indent=4)
+
+print("Test cases have been saved as individual JSON files.")

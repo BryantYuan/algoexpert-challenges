@@ -1,0 +1,34 @@
+{
+    "input": {
+        "classMethodsToCall": [
+            {
+                "arguments": [
+                    0
+                ],
+                "method": "find"
+            },
+            {
+                "arguments": [
+                    1
+                ],
+                "method": "find"
+            }
+        ]
+    },
+    "expected": [
+        {
+            "arguments": [
+                0
+            ],
+            "method": "find",
+            "output": null
+        },
+        {
+            "arguments": [
+                1
+            ],
+            "method": "find",
+            "output": null
+        }
+    ]
+}

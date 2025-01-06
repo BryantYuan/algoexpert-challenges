@@ -1,0 +1,11 @@
+{
+    "input": {
+        "nums": [
+            1
+        ]
+    },
+    "expectedOutput": [
+        2,
+        3
+    ]
+}

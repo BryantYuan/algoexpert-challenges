@@ -1,0 +1,10 @@
+{
+    "input": {
+        "array": [
+            1,
+            2,
+            1
+        ]
+    },
+    "expectedOutput": 1
+}

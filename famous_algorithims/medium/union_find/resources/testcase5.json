@@ -1,0 +1,101 @@
+{
+    "input": {
+        "classMethodsToCall": [
+            {
+                "arguments": [
+                    10
+                ],
+                "method": "createSet"
+            },
+            {
+                "arguments": [
+                    5
+                ],
+                "method": "createSet"
+            },
+            {
+                "arguments": [
+                    10
+                ],
+                "method": "find"
+            },
+            {
+                "arguments": [
+                    5
+                ],
+                "method": "find"
+            },
+            {
+                "arguments": [
+                    10,
+                    5
+                ],
+                "method": "union"
+            },
+            {
+                "arguments": [
+                    10
+                ],
+                "method": "find"
+            },
+            {
+                "arguments": [
+                    5
+                ],
+                "method": "find"
+            }
+        ]
+    },
+    "expected": [
+        {
+            "arguments": [
+                10
+            ],
+            "method": "createSet",
+            "output": null
+        },
+        {
+            "arguments": [
+                5
+            ],
+            "method": "createSet",
+            "output": null
+        },
+        {
+            "arguments": [
+                10
+            ],
+            "method": "find",
+            "output": 10
+        },
+        {
+            "arguments": [
+                5
+            ],
+            "method": "find",
+            "output": 5
+        },
+        {
+            "arguments": [
+                10,
+                5
+            ],
+            "method": "union",
+            "output": null
+        },
+        {
+            "arguments": [
+                10
+            ],
+            "method": "find",
+            "output": 10
+        },
+        {
+            "arguments": [
+                5
+            ],
+            "method": "find",
+            "output": 10
+        }
+    ]
+}

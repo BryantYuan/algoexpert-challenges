@@ -1,0 +1,37 @@
+{
+    "competitions": [
+        [
+            "Bulls",
+            "Eagles"
+        ],
+        [
+            "Bulls",
+            "Bears"
+        ],
+        [
+            "Bulls",
+            "Monkeys"
+        ],
+        [
+            "Eagles",
+            "Bears"
+        ],
+        [
+            "Eagles",
+            "Monkeys"
+        ],
+        [
+            "Bears",
+            "Monkeys"
+        ]
+    ],
+    "results": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+    ],
+    "expectedOutput": "Bulls"
+}

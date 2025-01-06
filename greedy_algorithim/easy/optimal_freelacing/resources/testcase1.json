@@ -1,0 +1,7 @@
+{
+    "input": {
+        "jobs": []
+    },
+    "expected": 0,
+    "output": -1
+}

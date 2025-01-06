@@ -1,0 +1,67 @@
+import json
+
+# List of dictionaries to split
+data = [
+    {
+      "input": { "coins": [5, 7, 1, 1, 2, 3, 22] },
+      "expectedOutput": 20
+    },
+    {
+      "input": { "coins": [1, 1, 1, 1, 1] },
+      "expectedOutput": 6
+    },
+    {
+      "input": { "coins": [1, 5, 1, 1, 1, 10, 15, 20, 100] },
+      "expectedOutput": 55
+    },
+    {
+      "input": { "coins": [6, 4, 5, 1, 1, 8, 9] },
+      "expectedOutput": 3
+    },
+    {
+      "input": { "coins": [] },
+      "expectedOutput": 1
+    },
+    {
+      "input": { "coins": [87] },
+      "expectedOutput": 1
+    },
+    {
+      "input": { "coins": [5, 6, 1, 1, 2, 3, 4, 9] },
+      "expectedOutput": 32
+    },
+    {
+      "input": { "coins": [5, 6, 1, 1, 2, 3, 43] },
+      "expectedOutput": 19
+    },
+    {
+      "input": { "coins": [1, 1] },
+      "expectedOutput": 3
+    },
+    {
+      "input": { "coins": [2] },
+      "expectedOutput": 1
+    },
+    {
+      "input": { "coins": [1] },
+      "expectedOutput": 2
+    },
+    {
+      "input": { "coins": [109, 2000, 8765, 19, 18, 17, 16, 8, 1, 1, 2, 4] },
+      "expectedOutput": 87
+    },
+    {
+      "input": { "coins": [1, 2, 3, 4, 5, 6, 7] },
+      "expectedOutput": 29
+    }
+  ]
+
+
+
+# Split test_cases into separate files
+for i, testcase in enumerate(data, start=1):
+    filename = f"testcase{i}.json"
+    with open(filename, 'w') as file:
+        json.dump(testcase, file, indent=4)
+
+print("Test cases have been saved as individual JSON files.")

@@ -1,0 +1,31 @@
+{
+    "expectedOutput": {
+        "isValidTopologicalOrder": true,
+        "order": [
+            5,
+            2,
+            3,
+            1,
+            4
+        ]
+    },
+    "input": {
+        "deps": [
+            [
+                1,
+                4
+            ],
+            [
+                5,
+                2
+            ]
+        ],
+        "jobs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ]
+    }
+}

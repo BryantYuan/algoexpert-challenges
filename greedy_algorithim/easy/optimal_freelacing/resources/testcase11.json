@@ -1,0 +1,44 @@
+{
+    "input": {
+        "jobs": [
+            {
+                "deadline": 2,
+                "payment": 1
+            },
+            {
+                "deadline": 1,
+                "payment": 4
+            },
+            {
+                "deadline": 3,
+                "payment": 2
+            },
+            {
+                "deadline": 1,
+                "payment": 3
+            },
+            {
+                "deadline": 4,
+                "payment": 3
+            },
+            {
+                "deadline": 4,
+                "payment": 2
+            },
+            {
+                "deadline": 4,
+                "payment": 1
+            },
+            {
+                "deadline": 5,
+                "payment": 4
+            },
+            {
+                "deadline": 8,
+                "payment": 1
+            }
+        ]
+    },
+    "expected": 16,
+    "output": -1
+}

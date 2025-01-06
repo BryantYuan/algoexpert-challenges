@@ -1,0 +1,11 @@
+{
+    "input": {
+        "points": [
+            [
+                0,
+                0
+            ]
+        ]
+    },
+    "expected_output": 1
+}

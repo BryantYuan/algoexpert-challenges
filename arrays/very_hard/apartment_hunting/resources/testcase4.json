@@ -1,0 +1,60 @@
+{
+    "input": {
+        "blocks": [
+            {
+                "foo": true,
+                "gym": false,
+                "kappa": false,
+                "office": true,
+                "school": true,
+                "store": false
+            },
+            {
+                "foo": true,
+                "gym": true,
+                "kappa": false,
+                "office": false,
+                "school": false,
+                "store": false
+            },
+            {
+                "foo": true,
+                "gym": true,
+                "kappa": false,
+                "office": false,
+                "school": true,
+                "store": false
+            },
+            {
+                "foo": true,
+                "gym": false,
+                "kappa": false,
+                "office": false,
+                "school": true,
+                "store": false
+            },
+            {
+                "foo": true,
+                "gym": true,
+                "kappa": false,
+                "office": false,
+                "school": true,
+                "store": false
+            },
+            {
+                "foo": true,
+                "gym": false,
+                "kappa": false,
+                "office": false,
+                "school": true,
+                "store": true
+            }
+        ],
+        "reqs": [
+            "gym",
+            "school",
+            "store"
+        ]
+    },
+    "expected_output": 4
+}

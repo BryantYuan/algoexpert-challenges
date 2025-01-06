@@ -1,0 +1,13 @@
+{
+    "calendar1": [],
+    "calendar2": [],
+    "dailyBounds1": [
+        "9:00",
+        "16:30"
+    ],
+    "dailyBounds2": [
+        "9:30",
+        "20:00"
+    ],
+    "meetingDuration": 60
+}

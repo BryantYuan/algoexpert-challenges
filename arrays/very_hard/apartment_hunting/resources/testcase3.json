@@ -1,0 +1,49 @@
+{
+    "input": {
+        "blocks": [
+            {
+                "gym": false,
+                "office": true,
+                "school": true,
+                "store": false
+            },
+            {
+                "gym": true,
+                "office": false,
+                "school": false,
+                "store": false
+            },
+            {
+                "gym": true,
+                "office": false,
+                "school": true,
+                "store": false
+            },
+            {
+                "gym": false,
+                "office": false,
+                "school": true,
+                "store": false
+            },
+            {
+                "gym": false,
+                "office": false,
+                "school": true,
+                "store": false
+            },
+            {
+                "gym": false,
+                "office": false,
+                "school": true,
+                "store": true
+            }
+        ],
+        "reqs": [
+            "gym",
+            "office",
+            "school",
+            "store"
+        ]
+    },
+    "expected_output": 2
+}
