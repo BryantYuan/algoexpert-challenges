@@ -1,0 +1,7 @@
+{
+    "input": {
+        "numDigits": 4,
+        "number": "129847563"
+    },
+    "expected": "98763"
+}
