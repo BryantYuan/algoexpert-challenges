@@ -14,7 +14,7 @@ def oneEdit(stingOne: str, stingTwo: str) -> bool:
     smallerLength = min(length1, length2)
 
 
-    while index1 < length1:
+    while index1 < length1 and index2 < length2:
 
         if stingOne[index1] != stingTwo[index2]:
             diff_count += 1
@@ -39,5 +39,8 @@ def oneEdit(stingOne: str, stingTwo: str) -> bool:
 
         if diff_count > 1:
             return False
+
+    if diff_count > 1:
+        return False
 
     return True
