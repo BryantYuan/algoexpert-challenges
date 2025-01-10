@@ -1,0 +1,7 @@
+{
+    "input": {
+        "stringOne": "bcdefgijklmnopqrstuvwxyz",
+        "stringTwo": "abcdefghijklmnopqrstuvwxyz"
+    },
+    "expected": false
+}

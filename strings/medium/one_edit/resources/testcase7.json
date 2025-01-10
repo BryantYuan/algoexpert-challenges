@@ -1,0 +1,7 @@
+{
+    "input": {
+        "stringOne": "b",
+        "stringTwo": "ab"
+    },
+    "expected": true
+}
