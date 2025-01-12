@@ -1,0 +1,9 @@
+{
+    "input": {
+        "buildings": [
+            10,
+            21
+        ]
+    },
+    "expected": 21
+}
